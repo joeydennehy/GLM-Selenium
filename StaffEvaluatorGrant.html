@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://www.grantinterface.com/" />
+<title>StaffEvaluatorGrant</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">StaffEvaluatorGrant</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>'https://dev.grantinterface.com/Home/Logon?urlkey=joey3'</td>
+	<td>site</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'regressionstaff@invalid.com'</td>
+	<td>stafflogin</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'Test Regression Evaluation 2'</td>
+	<td>projectname</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'/joey3/Common/GetFile.aspx'</td>
+	<td>fileplace</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${site}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=EmailAddress</td>
+	<td>${stafflogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password</td>
+	<td>test1234</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Log On']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//span[text()='Reset Password']</td>
+	<td>resetpassword</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${resetpassword}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='NewPassword']</td>
+	<td>test1234!</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='ConfirmNewPassword']</td>
+	<td>test1234!</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Reset Password']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(text(),'Shared Documents')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(text(),'Fax to File')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(text(),'Staff Evaluator')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//span[contains(@class,'fa-home')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[@href='/Process/FilterProcess']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Edit My Profile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Change Password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//h4[text()='Change Password']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//label[contains(text(),'Password*')]/parent::div/input[@type='password']</td>
+	<td>test1234</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//label[contains(text(),'Confirm Password*')]/parent::div/input[@type='password']</td>
+	<td>test1234</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[text()='Save Password']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'Shared Documents')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//span[contains(text(),'Shared Documents')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//a[contains(@href,'${fileplace}')]</td>
+	<td>text</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@name='SearchTerm']</td>
+	<td>${text}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@id='DocumentSearch']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(text(),'${text}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=${text}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//span[contains(@class,'fa-home')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//span[contains(text(),'Dashboard')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//a[contains(@href,'/Workload/List/LOIEvaluationAssigned')]/span</td>
+	<td>number</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(@href,'/Workload/List/LOIEvaluationAssigned')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//a[contains(@href,'#Assigned')]/span</td>
+	<td>number2</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>${number}==${number2}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='SearchBox']</td>
+	<td>${projectname}</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=${projectname}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${projectname}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//span[text()='Request Summary']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'Return to')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//span[text()='LOI Evaluation Assigned']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[text()='${projectname}']/parent::td/parent::tr/td[7]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//span[text()='Evaluation']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[contains(text(),'Save')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//li[text()='Scoring 2']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//li[text()='Scoring 1']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Return To Evaluation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//label[contains(text(),'Scoring 2*')]/parent::div/div[@class='btn-group']/label[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//label[contains(text(),'Scoring 1*')]/parent::div/div[@class='btn-group']/label[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[contains(text(),'Save')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//li[text()='Scoring 2']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//li[text()='Scoring 1']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Continue']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//span[text()='LOI Evaluation Assigned']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[text()='Test Regression Evaluation 2']/parent::td/parent::tr/td[6]/span[contains(@class,'fa-check-circle')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Edit My Profile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//span[text()='Update User']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=View User Email History</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//span[text()='Contact Email History']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@id='TopBackButton']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//span[text()='Update User']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_City']/div/input[@type='text']</td>
+	<td>Bozeman</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Save']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Edit My Profile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@data-element-fieldcode='Contact_City']/div/input[@value='Bozeman']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_City']/div/input[@type='text']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Save']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

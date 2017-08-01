@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://www.grantinterface.com/" />
+<title>ApplicantGrants</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ApplicantGrants</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>'regressionapplicant@invalid.com'</td>
+	<td>applicantlogin</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'test1234'</td>
+	<td>applicantpassword</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'https://dev.grantinterface.com/Home/Logon?urlkey=joey3'</td>
+	<td>site</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'Regression Test A Public'</td>
+	<td>publicprocess1</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'Regression Test B Public'</td>
+	<td>publicprocess2</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'Regression Test Restricted'</td>
+	<td>restrictedprocess</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'123456789'</td>
+	<td>organizationduns</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${site}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=EmailAddress</td>
+	<td>${applicantlogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password</td>
+	<td>${applicantpassword}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Log On']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>id=PublicProfileButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//strong[text()='Organization:']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//strong[text()='Applicant:']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//label[text()='Process:']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Edit LOI</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//span[text()='LOI']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//small[contains(text(),'Test Regression')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//small[contains(text(),'Process: Regression Test B Public')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@href='/Dashboard']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>id=PublicProfileButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//strong[text()='Organization:']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//strong[text()='Applicant:']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//label[text()='Process:']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//span[text()='Reset Password']</td>
+	<td>resetpassword</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Edit My Profile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//span[test()='Update Users']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>//div[@data-element-fieldcode='Contact_First_Name']/div/input[@type='text']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>//div[@data-element-fieldcode='Contact_Last_Name']/div/input[@type='text']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>//div[@data-element-fieldcode='Contact_Email']/div/span/input[@type='text']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>//div[@data-element-fieldcode='Contact_First_Name']/div/input[@type='text']</td>
+	<td>Regression</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>//div[@data-element-fieldcode='Contact_Last_Name']/div/input[@type='text']</td>
+	<td>Applicant</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>//div[@data-element-fieldcode='Contact_Email']/div/span/input[@type='text']</td>
+	<td>${applicantlogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Middle_Name']/div/input[@type='text']</td>
+	<td>Middle</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Save']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@data-original-title='Edit User']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>//div[@data-element-fieldcode='Contact_Middle_Name']/div/input[@type='text']</td>
+	<td>Middle</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>//div[@data-element-fieldcode='Contact_Middle_Name']/div/input[@type='text']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@href='/Dashboard']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@data-original-title='Edit Organization']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//span[text()='Update Organization']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Organization History</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//span[text()='Organization Summary']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Test Regression</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//span[text()='Request Summary']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//small[contains(text(),'Test Regression')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//small[contains(text(),'${publicprocess2}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@href='/Dashboard']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@data-original-title='Edit Organization']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//span[text()='Update Organization']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>//div[@data-element-fieldcode='Organization_Name']/div/input[@type='text']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>//div[@data-element-fieldcode='Organization_Tax_Id']/div/input[@type='text']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>//div[@data-element-fieldcode='Organization_DUNS']/div/input[@type='text']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>//div[@data-element-fieldcode='Organization_WebSite']/div/input[@type='text']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>//div[@data-element-fieldcode='Organization_Name']/div/input[@type='text']</td>
+	<td>Regression Test Org</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>//div[@data-element-fieldcode='Organization_Tax_Id']/div/input[@type='text']</td>
+	<td>54-1774039</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>//div[@data-element-fieldcode='Organization_WebSite']/div/input[@type='text']</td>
+	<td>www.google.com</td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//li[@class!='active']/span[text()='Oganizations']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//li[@class!='active']/span[text()='Update Organization']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//li[@class='active']/link=Regression Test Org</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Organization_DUNS']/div/input[@type='text']</td>
+	<td>${organizationduns}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Save']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>//div[@data-element-fieldcode='Organization_DUNS']/div/input[@type='text']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>//div[@data-element-fieldcode='Organization_DUNS']/div/input[@type='text']</td>
+	<td>${organizationduns}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@href='/Dashboard']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Public Profile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//a[text()='Accept']</td>
+	<td>terms</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${terms}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[text()='Accept']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//span[text()='Public Profile']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//a[text()='General Info']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//a[text()=&quot;990's&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//a[text()='Community Feedback']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Apply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//span[text()='Apply']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//input[@name='AccessCode']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//div[@class='panel panel-default ProcessPanel']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>id=SearchBox</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=SearchBox</td>
+	<td>${publicprocess2}</td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>//span[text()='${publicprocess2}']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>//span[text()='${publicprocess1}'']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@name='AccessCode']</td>
+	<td>test1234</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[text()='Enter Code']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//span[text()='${restrictedprocess}']/parent::h4/parent::div/parent::div/div[@class='panel-body']/a[@data-original-title='Preview this Form']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//span[text()='${restrictedprocess}']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//span[text()='${restrictedprocess}']/parent::h4/parent::div/parent::div/div[@class='panel-body']/a[@data-original-title='Preview this Form']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//span[text()='LOI']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@type='text']</td>
+	<td>Test Regression</td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>//input[@type='text']</td>
+	<td>\32</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>//input[@type='text']</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//span[text()='Preview Only: This Form is being viewed in Preview mode. You must Log On or Create an Account to Apply.']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='BreadCrumbs']/ol/li/a[text()='Apply']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//span[text()='Apply']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Send to GrantHub</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=SendProcessToGrantHubSubmit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//h4[text()='Send to GrantHub']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//input[@id='SiteKey']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[text()='Close']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@href='/Process/ViewGrantHubInfo']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[contains(text(),'OK')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//h4[text()='What is GrantHub?']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.close</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>//button[text()='OK'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=SearchBox</td>
+	<td>${publicprocess2}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Apply']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//span[text()='LOI']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@type='text']</td>
+	<td>Test Regression</td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>//input[@type='text']</td>
+	<td>\32</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>//input[@type='text']</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[contains(text(),'Save LOI')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//span[text()='Confirmation Page']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Continue']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[contains(text(),'Submit LOI')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//span[text()='Confirmation Page']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//div[text()='The LOI has been submitted.']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Continue']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//span[text()='${publicprocess2}']/parent::div/div[@class='row']/span[@class='col-sm-3']/a[text()='View LOI']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>//input[@type='text']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//span[text()='Fax to File']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${site}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=EmailAddress</td>
+	<td>${applicantlogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password</td>
+	<td>${applicantpassword}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Log On']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//span[text()='Apply']</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

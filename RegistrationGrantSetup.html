@@ -1,0 +1,1271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://www.grantinterface.com/" />
+<title>registration</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">registration</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>''</td>
+	<td>adminlogin</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>''</td>
+	<td>adminpassword</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'https://dev.grantinterface.com/Home/Logon?urlkey=joey3'</td>
+	<td>site</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'joey 3'</td>
+	<td>foundationname</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'Regression Test Org Registration'</td>
+	<td>organizationname</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${site}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=EmailAddress</td>
+	<td>${adminlogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password</td>
+	<td>${adminpassword}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.btn.btn-primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${foundationname}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Organizations</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=UserDropdown</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Toggle System Options</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Edit Organization Form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form7 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form9 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='submit'])[20]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form11 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form13 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form15 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form17 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form19 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #DisplayType</td>
+	<td>label=Hidden</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form21 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form23 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form25 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form27 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form29 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='submit'])[20]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form31 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=UserDropdown</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Toggle System Options</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Edit User Form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form5 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form9 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form13 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form15 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form19 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #DisplayType</td>
+	<td>label=Hidden</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form21 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form23 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form25 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form27 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form29 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form31 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form33 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form35 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form37 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form43 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #DisplayType</td>
+	<td>label=Everyone</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form49 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form53 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form57 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form59 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form61 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form63 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form65 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form67 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form69 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form71 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form73 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form75 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form77 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form79 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.col-xs-6 &gt; #RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Organizations</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Organization</td>
+	<td>${organizationname}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=OrganizationSearchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>link=${organizationname}</td>
+	<td>organizationLink</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${organizationLink}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${organizationname}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'Delete')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//input[@id='confirmActionInput']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='confirmActionInput']</td>
+	<td>DELETE ORGANIZATION</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'OK')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

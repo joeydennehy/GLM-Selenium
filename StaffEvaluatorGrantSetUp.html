@@ -1,0 +1,1171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://www.grantinterface.com/" />
+<title>StaffEvaluatorGrantSetUp</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">StaffEvaluatorGrantSetUp</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>''</td>
+	<td>adminlogin</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>''</td>
+	<td>adminpassword</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'https://dev.grantinterface.com/Home/Logon?urlkey=joey3'</td>
+	<td>site</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'joey 3'</td>
+	<td>foundationname</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'Regression Test Evaluation 2'</td>
+	<td>processname</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'regressionstaff@invalid.com'</td>
+	<td>stafflogin</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'Regression Test Org'</td>
+	<td>organizationname</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'regressionapplicant@invalid.com'</td>
+	<td>applicantlogin</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'Test Regression Evaluation 2'</td>
+	<td>projectname</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${site}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=EmailAddress</td>
+	<td>${adminlogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password</td>
+	<td>${adminpassword}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Log On']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[text()='${foundationname}']/parent::td/parent::tr/td[5]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#EnableSideBySideEvaluation &gt; td.col-sm-icon &gt; a.fa.fa-pencil</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='True']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#ShowApplicantToEvaluators &gt; td.col-sm-icon &gt; a.fa.fa-pencil</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='False']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#IsFaxFoundation &gt; td.col-sm-icon &gt; a.fa.fa-pencil</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='True']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#ShowEvaluatorsProcessSelector &gt; td.col-sm-icon &gt; a.fa.fa-pencil</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='True']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#StaffEvaluatorCustomName &gt; td.col-sm-icon &gt; a.fa.fa-history</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Log on as Administrator</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Process Manager</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>link=${processname}</td>
+	<td>link</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${link}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Add New Process</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Name</td>
+	<td>${processname}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Create Process']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@data-form-type='LOI']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>link=Create New Form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Create New Form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[text()='Create New Form']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Create New Form']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Process Manager</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sign Out</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=EmailAddress</td>
+	<td>${adminlogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password</td>
+	<td>${adminpassword}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Log On']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[text()='${foundationname}']/parent::td/parent::tr/td[4]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Manage Process Stages</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//td[contains(text(),'${processname}')]/parent::tr/td[3]/div/a[@class='fa fa-toggle-off icon-only AddRemoveLoiEvaluationButton']</td>
+	<td>loiEvalOff</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${loiEvalOff}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//td[contains(text(),'${processname}')]/parent::tr/td[3]/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Log on as Administrator</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Shared Documents</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//input[contains(@id,'Staff_EvaluatorSelector')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeChecked</td>
+	<td>//input[contains(@id,'Staff_EvaluatorSelector')]</td>
+	<td>staffChecked</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${staffChecked}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[contains(@id,'Staff_EvaluatorSelector')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Process Manager</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//tr[descendant::a[contains(.,'${processname}')]]/td[7]/a[contains(@class, 'fa-toggle-off')]</td>
+	<td>toggle</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${toggle}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${processname}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@data-form-type='Evaluation']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>link=Create New Form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Create New Form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[text()='Create New Form']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Create New Form']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[text()='Add New Question']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//a[text()='Scoring']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[text()='Scoring']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[text()='Save Question']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='Label']</td>
+	<td>Scoring 1</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@name='Min']</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@name='Max']</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[text()='Save Question']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[text()='Add New Question']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//a[text()='Scoring']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[text()='Scoring']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[text()='Save Question']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='Label']</td>
+	<td>Scoring 2</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@name='Min']</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@name='Max']</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[text()='Save Question']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Login</td>
+	<td>${stafflogin}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'Search')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//a[contains(text(),'regressionstaff')]</td>
+	<td>userlink</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${userlink}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Add New User</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_First_Name']/div/input</td>
+	<td>Regression</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Last_Name']/div/input</td>
+	<td>StaffEvaluator</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Email']/div/span/input</td>
+	<td>${stafflogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Password']/div/input</td>
+	<td>test1234</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Password_Confirmation']/div/input</td>
+	<td>test1234</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=StaffEvaluator</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[contains(text(),'Save')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Process Manager</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${processname}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[@data-val-required='The RoleId field is required.']</td>
+	<td>Staff Evaluator</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Process Manager</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//tr[descendant::a[contains(.,'${processname}')]]/td[7]/a[contains(@class, 'fa-toggle-off')]</td>
+	<td>toggle</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${toggle}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[descendant::a[contains(.,'${processname}')]]/td[7]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Organizations</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Organization</td>
+	<td>${organizationname}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=OrganizationSearchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>link=${organizationname}</td>
+	<td>organizationlink</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${organizationlink}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Add New Organization</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Groups_0__Elements_0__Value</td>
+	<td>${organizationname}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Groups_0__Elements_2__Value</td>
+	<td>54-1774039</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//button[text()='Save'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Login</td>
+	<td>${applicantlogin}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'Search')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//a[contains(text(),'regressionapplicant')]</td>
+	<td>userlink</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${userlink}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Add New User</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_First_Name']/div/input</td>
+	<td>Regression</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Last_Name']/div/input</td>
+	<td>Applicant</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Email']/div/span/input</td>
+	<td>${applicantlogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Password']/div/input</td>
+	<td>test1234</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Password_Confirmation']/div/input</td>
+	<td>test1234</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=Applicant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=Organization</td>
+	<td>${organizationname}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Save'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//span[contains(@class,'fa-home')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//a[@href='/Workload/List/LOIEvaluation?active=Assigned']</td>
+	<td>evaluationworkload</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${evaluationworkload}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@href='/Workload/List/LOIEvaluation?active=Assigned']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>link=${projectname}</td>
+	<td>evaluation</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${evaluation}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${site}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=EmailAddress</td>
+	<td>${applicantlogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password</td>
+	<td>${applicantpassword}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Log On']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Apply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//span[text()='${processname}']/ parent::h4/parent::div/parent::div/div[@class='panel-body']/div/form/button[text()='Apply']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@type='text']</td>
+	<td>${projectname}</td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>//input[@type='text']</td>
+	<td>\32</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>//input[@type='text']</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[contains(text(),'Submit LOI')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${site}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=EmailAddress</td>
+	<td>${adminlogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password</td>
+	<td>${adminpassword}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Log On']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${foundationname}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@href='/Workload/List/LOI?active=Submitted']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${projectname}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@data-original-title='View LOI']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[contains(text(),'LOI Complete')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Assign / View Evaluators</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//h4[text()='Select Evaluators']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//td[contains(text(),'StaffEvaluator')]/parent::tr/td[1]/input[@type='checkbox']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@class='modal-footer']/button[contains(text(),'Save')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>//div[@class='modal-footer']/button[contains(text(),'Save')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${projectname}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[@id='AvailableStatusList']</td>
+	<td>LOI Complete</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Revert Status')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//h4[contains(text(),'Revert Status')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Assign/View Evaluators</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//h4[text()='Select Evaluators']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//td[contains(text(),'StaffEvaluator')]/parent::tr/td[1]/input[@type='checkbox']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@class='modal-footer']/button[contains(text(),'Save')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://www.grantinterface.com/" />
+<title>ApplicantGrantsSetUp</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ApplicantGrantsSetUp</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>''</td>
+	<td>adminlogin</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>''</td>
+	<td>adminpassword</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'https://dev.grantinterface.com/Home/Logon?urlkey=joey3'</td>
+	<td>site</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'joey 3'</td>
+	<td>foundationName</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'regressionapplicant@invalid.com'</td>
+	<td>applicantlogin</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'regressionapplicant2@invalid.com'</td>
+	<td>applicantlogin2</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${site}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=EmailAddress</td>
+	<td>${adminlogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password</td>
+	<td>${adminpassword}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Log On']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[text()='${foundationName}']/parent::td/parent::tr/td[5]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#IsConnectApplicant &gt; td.col-sm-icon &gt; a.fa.fa-pencil</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='True']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#OrganizationEditFields &gt; td.col-sm-icon &gt; a.fa.fa-pencil</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[contains(text(),'OK')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeChecked</td>
+	<td>//input[@value='Organization_Name']</td>
+	<td>checked</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${checked}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='Organization_Name']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeChecked</td>
+	<td>//input[@value='Organization_Tax_Id']</td>
+	<td>checked1</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${checked1}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='Organization_Tax_Id']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeChecked</td>
+	<td>//input[@value='Organization_DUNS']</td>
+	<td>checked2</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${checked2}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='Organization_DUNS']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeChecked</td>
+	<td>//input[@value='Organization_WebSite']</td>
+	<td>checked3</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${checked3}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='Organization_WebSite']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#OrgViewableByApplicant &gt; td.col-sm-icon &gt; a.fa.fa-pencil</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='All']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#IsFaxFoundation &gt; td.col-sm-icon &gt; a.fa.fa-pencil</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='True']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[text()='OK']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Log on as Administrator</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Tools</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Process Manager</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>link=Regression Test Restricted</td>
+	<td>link</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${link}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Add New Process</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Name</td>
+	<td>Regression Test Restricted</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=Visibility</td>
+	<td>label=Restricted</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=AccessCode</td>
+	<td>test1234</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Create Process']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@data-form-type='LOI']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>link=Create New Form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Create New Form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[text()='Create New Form']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Create New Form']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Process Manager</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>link=Regression Test A Public</td>
+	<td>link2</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${link2}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Add New Process</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Name</td>
+	<td>Regression Test A Public</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.btn.btn-primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@data-form-type='LOI']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>link=Create New Form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Create New Form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[text()='Create New Form']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Create New Form']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Process Manager</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>link=Regression Test B Public</td>
+	<td>link3</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${link3}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Add New Process</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Name</td>
+	<td>Regression Test B Public</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Create Process']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@data-form-type='LOI']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>link=Create New Form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Create New Form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[text()='Create New Form']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Create New Form']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Process Manager</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//tr[descendant::a[contains(.,'Regression Test Restricted')]]/td[7]/a[contains(@class, 'fa-toggle-off')]</td>
+	<td>toggle</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${toggle}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${toggle}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[descendant::a[contains(.,'Regression Test Restricted')]]/td[7]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//tr[descendant::a[contains(.,'Regression Test A Public')]]/td[7]/a[contains(@class, 'fa-toggle-off')]</td>
+	<td>toggle2</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${toggle2}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[descendant::a[contains(.,'Regression Test A Public')]]/td[7]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//tr[descendant::a[contains(.,'Regression Test B Public')]]/td[7]/a[contains(@class, 'fa-toggle-off')]</td>
+	<td>toggle3</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${toggle3}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[descendant::a[contains(.,'Regression Test B Public')]]/td[7]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Organizations</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Organization</td>
+	<td>Regression Test Org</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=OrganizationSearchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>link=Regression Test Org</td>
+	<td>organizationlink</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${organizationlink}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Add New Organization Manually</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Organization_Name']/div/input</td>
+	<td>Regression Test Org</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Organization_Tax_Id']/div/input</td>
+	<td>54-1774039</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Organization_WebSite']/div/input</td>
+	<td>www.google.com</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//button[text()='Save'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Login</td>
+	<td>${applicantlogin}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'Search')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//a[contains(text(),'regressionapplicant')]</td>
+	<td>userlink</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${userlink}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Add New User</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_First_Name']/div/input</td>
+	<td>Regression</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Last_Name']/div/input</td>
+	<td>Applicant</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Email']/div/span/input</td>
+	<td>${applicantlogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Password']/div/input</td>
+	<td>test1234</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Password_Confirmation']/div/input</td>
+	<td>test1234</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=Applicant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=Organization</td>
+	<td>label=Regression Test Org</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[contains(text(),'Save')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Login</td>
+	<td>${applicantlogin2}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'Search')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//a[contains(text(),'regressionapplicant2')]</td>
+	<td>userlink</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${userlink}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Add New User</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_First_Name']/div/input</td>
+	<td>Regression</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Last_Name']/div/input</td>
+	<td>Applicant2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Email']/div/span/input</td>
+	<td>${applicantlogin2}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Password']/div/input</td>
+	<td>test1234</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Password_Confirmation']/div/input</td>
+	<td>test1234</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=Applicant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=Organization</td>
+	<td>label=Regression Test Org</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[contains(text(),'Save')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Organizations</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=UserDropdown</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Toggle System Options</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Edit Organization Form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#form11 &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=DisplayType</td>
+	<td>label=Everyone</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${site}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=EmailAddress</td>
+	<td>${applicantlogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password</td>
+	<td>test1234</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Log On']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//span[text()='Reset Password']</td>
+	<td>resetpassword</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${resetpassword}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='NewPassword']</td>
+	<td>test1234!</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='ConfirmNewPassword']</td>
+	<td>test1234!</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[text()='Reset Password']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Edit My Profile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Change Password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//h4[text()='Change Password']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//label[contains(text(),'Password*')]/parent::div/input[@type='password']</td>
+	<td>test1234</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//label[contains(text(),'Confirm Password*')]/parent::div/input[@type='password']</td>
+	<td>test1234</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[text()='Save Password']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Apply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//span[text()='Regression Test B Public']/ parent::h4/parent::div/parent::div/div[@class='panel-body']/div/form/button[text()='Apply']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@type='text']</td>
+	<td>Test Regression</td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>//input[@type='text']</td>
+	<td>\32</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>//input[@type='text']</td>
+	<td>blur</td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://www.grantinterface.com/" />
+<title>RegistrationScholarshipSetUp</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RegistrationScholarshipSetUp</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>''</td>
+	<td>adminlogin</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>''</td>
+	<td>adminpassword</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'https://dev.grantinterface.com/Home/Logon?urlkey=joey'</td>
+	<td>site</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'joey 3'</td>
+	<td>foundationname</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'Regression Test Org Registration'</td>
+	<td>organizationname</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${site}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=EmailAddress</td>
+	<td>${adminlogin}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password</td>
+	<td>${adminpassword}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[contains(text(),'Log On')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Watir Scholarship</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Toggle System Options</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Edit User Form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-element-fieldcode='Contact_Salutation']/div/div/form/button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=RequiredType</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-element-fieldcode='Contact_Middle_Name']/div/div/form/button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[@id='RequiredType']</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-element-fieldcode='Contact_Suffix']/div/div/form/button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[@id='RequiredType']</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-element-fieldcode='Contact_Business_Title']/div/div/form/button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[@id='RequiredType']</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-element-fieldcode='Contact_Email_Confirmation']/div/div/form/button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[@id='DisplayType']</td>
+	<td>label=Hidden</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-element-fieldcode='Contact_Phone']/div/div/form/button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[@id='RequiredType']</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-element-fieldcode='Contact_Mobile']/div/div/form/button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[@id='RequiredType']</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-element-fieldcode='Contact_Fax']/div/div/form/button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[@id='RequiredType']</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-element-fieldcode='Contact_Address_1']/div/div/form/button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[@id='RequiredType']</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-element-fieldcode='Contact_Address_2']/div/div/form/button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[@id='RequiredType']</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-element-fieldcode='Contact_City']/div/div/form/button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[@id='RequiredType']</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-element-fieldcode='Contact_State']/div/div/form/button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[@id='RequiredType']</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-element-fieldcode='Contact_Postal_Code']/div/div/form/button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[@id='RequiredType']</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@data-element-fieldcode='Contact_Country']/div/div/form/button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[@id='RequiredType']</td>
+	<td>label=Optional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>xpath=(//button[text()='Save Question'])</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

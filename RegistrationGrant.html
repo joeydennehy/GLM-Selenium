@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://www.grantinterface.com/" />
+<title>RegistrationGrant</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RegistrationGrant</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>'https://dev.grantinterface.com/Home/Logon?urlkey=joey3'</td>
+	<td>site</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'Regression Test Org Registration'</td>
+	<td>organizationname</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'regressionregistration@invalid.com'</td>
+	<td>regestrationlogin</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${site}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Create New Account</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlertNotPresent</td>
+	<td>//h4[text()='Organization Information']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Organization_Name']/div/input[@type='text']</td>
+	<td>${organizationname}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(),'Next')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>//div[@data-element-fieldcode='Organization_Name']/div/input[@type='text']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_First_Name']/div/input[@type='text']</td>
+	<td>Regression</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Last_Name']/div/input[@type='text']</td>
+	<td>Registration</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Email']/div/span/input[@type='text']</td>
+	<td>${regestrationlogin}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//h4[contains(text(),'User Information')]/parent::div/parent::div/div[contains(@class,'panel-collapse')]/div[@class='panel-footer clearfix']/button[contains(text(),'Next')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>//div[@data-element-fieldcode='Contact_First_Name']/div/input[@type='text']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='Yes']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//h4[contains(text(),'Executive Officer Question')]/parent::div/parent::div/div[contains(@class,'panel-collapse')]/div[@class='panel-footer clearfix']/button[contains(text(),'Next')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//h4[contains(text(),'Additional Executive Officer Information')]/parent::div/parent::div/div[contains(@class,'panel-collapse')]/div[@class='panel-footer clearfix']/button[contains(text(),'Next')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Password']/div/input[@type='password']</td>
+	<td>test1234</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@data-element-fieldcode='Contact_Password_Confirmation']/div/input[@type='password']</td>
+	<td>test1234</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[contains(text(),'Create Account')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='1']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ContinueButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
